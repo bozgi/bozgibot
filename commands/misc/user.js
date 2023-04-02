@@ -5,7 +5,7 @@ module.exports = {
         .setName('user')
         .setDescription('info wywolawcy komendy'),
     async execute(interaction) {
-        await interaction.reply(`Komenda wywołana przez ${interaction.user.username}, który dołączył ${interaction.user.account.age}`)
+        await interaction.reply(`Komenda wywołana przez ${interaction.user.username}, który dołączył ${interaction.member.joinedAt}`)
     }
 
 }
