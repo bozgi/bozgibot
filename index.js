@@ -41,7 +41,7 @@ client.on(Events.InteractionCreate, async interaction => {
         if (interaction.replied || interaction.deferred) {
             await interaction.followUp({ content: 'Wystąpił problem z wykonywaniem tej komendy!', ephemeral: true })
         } else  {
-            await interaction.reply(({ content: 'Wystąpił problem z wykonywaniem tej komendy!', ephemeral: true }))
+            await interaction.reply({ content: 'Wystąpił problem z wykonywaniem tej komendy!!', ephemeral: true })
         }
     }
 });
