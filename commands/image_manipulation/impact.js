@@ -24,15 +24,12 @@ module.exports = {
         const context = canvas.getContext('2d');
         const background = await Canvas.loadImage(img.url);
 
-        console.log(context.measureText(string).width);
-
-        let fontSize = 50;
+        let fontSize = 20;
         context.font = `${fontSize}px Comic Sans MS`;
 
         while (context.measureText(string).width > canvas.width - 20) {
             fontSize-= 2;
             context.font = `${fontSize}px Comic Sans MS`;
-            string = string.split(' ');
         }
 
         context.fillStyle = '#FFFFFF';
@@ -40,7 +37,7 @@ module.exports = {
         context.fill();
 
         context.fillStyle = '#000000';
-        context.fillText(string, 20, 25);
+        context.fillText(string, 20, 30);
 
         context.drawImage(background,0,50, img.width, img.height);
 
